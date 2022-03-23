@@ -36,9 +36,9 @@ Right: Firefox console
 
 If you try this yourself you may not see some of the logging messages. This is because you can show/hide different logging levels within the browser console. These are generally configured above the console window.
 
-**Insert Image**
+![](https://github.com/DrVicki/debug-console-methods/blob/main/images/firefox-logging-levels.png)
 
-Top: Google Chrome console
+Top: Google Chrome console Bottom: Firefox Console
 
 This ability to show/hide different logging levels is one of the reasons these logging methods are so useful. You can easily configure what you want to show so if you are only looking for errors you can turn off all the logging levels except ```error```, which makes it easier to understand what is happening.
 
@@ -65,7 +65,7 @@ person.name = "Sally"
 
 In Chrome when you expand an object in the console it calculates the value to be printed to the console. This means if you expand the ```person``` object within the console before running the code to change the name to ```Sally```, it will appear as expected even after you change the name to ```Sally```. If you expand the ```person``` object after you change the name to ```Sally```, you will see the name of the ```person``` object logged to the console is ```Sally``` instead of ```Kyle``` which was the actual value when you logged out ```person```.
 
-**ADD IMAGE OPEN CHROME AFTE LOG**
+![](https://github.com/DrVicki/debug-console-methods/blob/main/images/chrome-open-log-after-change.png)
 
 This is sometimes what you want because it is the most up-to-date value, but many times you want to know what the value of the object was at the time it was logged to the screen. 
   - An easy way to fix this issue is to just clone the object before logging it to the screen.
@@ -115,7 +115,7 @@ The second type of formatting is much more useful because it allows you to write
 ```
 console.log("Normal, %cRed, %cGreen", "color: red", "background-color: green; color: white")
 ```
-**ADD IMAGE CSS LOG**
+![](https://github.com/DrVicki/debug-console-methods/blob/main/images/css-log.png)
 
 The ```%c``` symbol tells the log method to apply whatever CSS styles are passed as the next argument to the log , to all the text which comes after the ```%c```. These styles will apply all the way to the end of ```log``` method or until the next ```%c``` symbol is used. This is perfect if you want to have a really fancy console message for particular use cases.
 
@@ -129,7 +129,8 @@ The ```dir``` method is very straight-forward. It works almost identically to th
   - The ```log``` method will output ```HTML``` elements as ```HTML```, which can be traversed while ```dir``` will log everything as if it were ```JSON```. 
   -   This means ```HTML``` elements will be logged just like an object when using ```dir```, which makes it incredibly useful for viewing properties on an ```HTML``` element.
 
-**ADD IMAGES logbody and dirbody**
+![](https://github.com/DrVicki/debug-console-methods/blob/main/images/log-body.png)
+![](https://github.com/DrVicki/debug-console-methods/blob/main/images/dir-body.png)
 
 Left: ```console.log(document.body)```
 Right: ```console.dir(document.body)```
@@ -148,7 +149,7 @@ const people = [
 console.table(people)
 ```
 
-**ADD IMAGE tableoutput**
+![](https://github.com/DrVicki/debug-console-methods/blob/main/images/table-output.png)
 
 This makes scanning your list to see differences between elements in the array easier. You can also sort by specific columns in the table by just clicking on the ```header``` of the table if the feature is supported in your browser dev tools.
 
@@ -180,7 +181,7 @@ console.groupEnd()
 console.log("Still Inside Second Group")
 console.groupEnd()
 ```
-**ADD IMAGE grouplog**
+![](https://github.com/DrVicki/debug-console-methods/blob/main/images/group-log.png)
 
 In the above example we created 3 different groups. The first group had no value passed to the ```group``` method so it just gets a default label. The second group we passed a label of ```Label``` to the group method so in the output you can see it has the label associated with the group. We also put a collapsed group inside this group to showcase you can nest groups inside of groups as much as you want. You can also see the collapsed group is not open by default in the output.
 
