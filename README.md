@@ -1,3 +1,5 @@
+# Console Methods for Debugging
+
 You are likely aware of the ```console.log``` method and maybe a few other console methods like ```console.error``` and ```console.dir```, but there are more than 20 console methods available to use. Each of these methods has their own use cases and if you use the right method for each use case you will drastically increase the quality of your debugging.
 
 We will cover 4 sections.
