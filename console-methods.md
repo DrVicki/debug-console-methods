@@ -28,4 +28,4 @@ console.info("Info")
 console.warn("Warn")
 console.error("Error")
 ```
-
+![](https://github.com/DrVicki/debug-console-methods/blob/main/images/chrome-basic-logging.png)
